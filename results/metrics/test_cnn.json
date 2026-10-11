@@ -1,0 +1,1211 @@
+{
+  "model": "cnn",
+  "image_level_thresholds": {
+    "stage1_prob_threshold": 0.45,
+    "stage1_prob_threshold_source": "tuned validation threshold (stage1_thresholds_cnn.json)",
+    "min_defective_patches": 4,
+    "min_defective_patches_source": "tuned validation threshold (stage1_thresholds_cnn.json)"
+  },
+  "stages": {
+    "binary_patch_level": {
+      "samples": 164,
+      "accuracy": 0.8048780487804879,
+      "balanced_accuracy": 0.8117647058823529,
+      "macro_precision": 0.731986531986532,
+      "macro_recall": 0.8117647058823529,
+      "macro_f1": 0.7515151515151515,
+      "weighted_f1": 0.8189209164818921,
+      "present_classes": [
+        "Normal",
+        "Defective"
+      ],
+      "absent_classes": [],
+      "per_class": {
+        "Normal": {
+          "precision": 0.9454545454545454,
+          "recall": 0.8,
+          "f1": 0.8666666666666667,
+          "support": 130,
+          "present_in_test": true
+        },
+        "Defective": {
+          "precision": 0.5185185185185185,
+          "recall": 0.8235294117647058,
+          "f1": 0.6363636363636364,
+          "support": 34,
+          "present_in_test": true
+        }
+      },
+      "confusion_matrix": [
+        [
+          104,
+          26
+        ],
+        [
+          6,
+          28
+        ]
+      ],
+      "mean_confidence": 0.7272425293922424
+    },
+    "defect_type_patch_level": {
+      "samples": 34,
+      "accuracy": 0.6470588235294118,
+      "balanced_accuracy": 0.45711500974658864,
+      "macro_precision": 0.3516666666666666,
+      "macro_recall": 0.3428362573099415,
+      "macro_f1": 0.3142135642135642,
+      "weighted_f1": 0.586070791953145,
+      "present_classes": [
+        "Broken End",
+        "Broken Yarn",
+        "Broken Pick",
+        "Weft Curling",
+        "Fuzzyball",
+        "Cut Selvage",
+        "Crease",
+        "Warp Ball",
+        "Nep",
+        "Weft Crack"
+      ],
+      "absent_classes": [
+        "Knots",
+        "Contamination",
+        "Weft Crack"
+      ],
+      "per_class": {
+        "Broken End": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1,
+          "present_in_test": true
+        },
+        "Broken Yarn": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666,
+          "support": 1,
+          "present_in_test": true
+        },
+        "Broken Pick": {
+          "precision": 0.72,
+          "recall": 0.9473684210526315,
+          "f1": 0.8181818181818182,
+          "support": 19,
+          "present_in_test": true
+        },
+        "Weft Curling": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2,
+          "present_in_test": true
+        },
+        "Fuzzyball": {
+          "precision": 1.0,
+          "recall": 0.16666666666666666,
+          "f1": 0.2857142857142857,
+          "support": 6,
+          "present_in_test": true
+        },
+        "Cut Selvage": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1,
+          "present_in_test": true
+        },
+        "Crease": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1,
+          "present_in_test": true
+        },
+        "Warp Ball": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1,
+          "present_in_test": true
+        },
+        "Knots": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0,
+          "present_in_test": false
+        },
+        "Contamination": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0,
+          "present_in_test": false
+        },
+        "Nep": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2,
+          "present_in_test": true
+        },
+        "Weft Crack": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0,
+          "present_in_test": false
+        }
+      },
+      "confusion_matrix": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          18,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_confidence": 0.5274903178215027
+    },
+    "image_level": {
+      "binary": {
+        "samples": 37,
+        "accuracy": 0.7837837837837838,
+        "balanced_accuracy": 0.7872023809523809,
+        "macro_precision": 0.7821637426900585,
+        "macro_recall": 0.7872023809523809,
+        "macro_f1": 0.7823529411764706,
+        "weighted_f1": 0.7847376788553259,
+        "present_classes": [
+          "Normal",
+          "Defective"
+        ],
+        "absent_classes": [],
+        "per_class": {
+          "Normal": {
+            "precision": 0.8421052631578947,
+            "recall": 0.7619047619047619,
+            "f1": 0.8,
+            "support": 21,
+            "present_in_test": true
+          },
+          "Defective": {
+            "precision": 0.7222222222222222,
+            "recall": 0.8125,
+            "f1": 0.7647058823529411,
+            "support": 16,
+            "present_in_test": true
+          }
+        },
+        "confusion_matrix": [
+          [
+            16,
+            5
+          ],
+          [
+            3,
+            13
+          ]
+        ],
+        "defect_recall": 0.8125,
+        "normal_false_positive_rate": 0.23809523809523808,
+        "tp": 13,
+        "fp": 5,
+        "tn": 16,
+        "fn": 3
+      },
+      "defect_type": {
+        "samples": 13,
+        "accuracy": 0.38461538461538464,
+        "balanced_accuracy": 0.4444444444444444,
+        "macro_precision": 0.21527777777777776,
+        "macro_recall": 0.3333333333333333,
+        "macro_f1": 0.24166666666666667,
+        "weighted_f1": 0.25384615384615383,
+        "present_classes": [
+          "Broken End",
+          "Broken Yarn",
+          "Broken Pick",
+          "Weft Curling",
+          "Fuzzyball",
+          "Cut Selvage",
+          "Crease",
+          "Warp Ball",
+          "Nep"
+        ],
+        "absent_classes": [
+          "Knots",
+          "Contamination",
+          "Weft Crack"
+        ],
+        "per_class": {
+          "Broken End": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "present_in_test": true
+          },
+          "Broken Yarn": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5,
+            "support": 1,
+            "present_in_test": true
+          },
+          "Broken Pick": {
+            "precision": 0.25,
+            "recall": 1.0,
+            "f1": 0.4,
+            "support": 2,
+            "present_in_test": true
+          },
+          "Weft Curling": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "present_in_test": true
+          },
+          "Fuzzyball": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 3,
+            "present_in_test": true
+          },
+          "Cut Selvage": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "present_in_test": true
+          },
+          "Crease": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "present_in_test": true
+          },
+          "Warp Ball": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "present_in_test": true
+          },
+          "Knots": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0,
+            "present_in_test": false
+          },
+          "Contamination": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0,
+            "present_in_test": false
+          },
+          "Nep": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 2,
+            "present_in_test": true
+          },
+          "Weft Crack": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0,
+            "present_in_test": false
+          }
+        },
+        "confusion_matrix": [
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    "segmentation_patch_level": {
+      "dice": 0.12981767995016916,
+      "iou": 0.08471183446901186,
+      "precision": 0.37337588923318044,
+      "recall": 0.26401717833110266
+    },
+    "segmentation_image_level": {
+      "scored_images": 13,
+      "skipped_images": 0,
+      "mean_dice": 0.16477645611526887,
+      "mean_iou": 0.10470766266774421,
+      "mean_precision": 0.2747046322328808,
+      "mean_recall": 0.34562372745514575
+    }
+  },
+  "image_level_predictions": [
+    {
+      "image": "0001_002_00.png",
+      "true_class": "Broken End",
+      "predicted": "Defective",
+      "predicted_class": "Broken End",
+      "confidence": 0.849783,
+      "stage1_probability": 0.679407,
+      "correct": true
+    },
+    {
+      "image": "0010_006_02.png",
+      "true_class": "Broken Yarn",
+      "predicted": "Defective",
+      "predicted_class": "Broken Yarn",
+      "confidence": 0.896469,
+      "stage1_probability": 0.632093,
+      "correct": true
+    },
+    {
+      "image": "0020_016_03.png",
+      "true_class": "Weft Curling",
+      "predicted": "Defective",
+      "predicted_class": "Broken Pick",
+      "confidence": 0.363832,
+      "stage1_probability": 0.664932,
+      "correct": true
+    },
+    {
+      "image": "0022_019_02.png",
+      "true_class": "Fuzzyball",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 0.526562,
+      "stage1_probability": 0.473438,
+      "correct": false
+    },
+    {
+      "image": "0028_019_02.png",
+      "true_class": "Fuzzyball",
+      "predicted": "Defective",
+      "predicted_class": "Broken Yarn",
+      "confidence": 0.591014,
+      "stage1_probability": 0.478447,
+      "correct": true
+    },
+    {
+      "image": "0053_019_03.png",
+      "true_class": "Fuzzyball",
+      "predicted": "Defective",
+      "predicted_class": "Broken Pick",
+      "confidence": 0.364303,
+      "stage1_probability": 0.661591,
+      "correct": true
+    },
+    {
+      "image": "0054_019_03.png",
+      "true_class": "Fuzzyball",
+      "predicted": "Defective",
+      "predicted_class": "Broken Pick",
+      "confidence": 0.396571,
+      "stage1_probability": 0.659683,
+      "correct": true
+    },
+    {
+      "image": "0057_019_06.png",
+      "true_class": "Fuzzyball",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 1.0,
+      "stage1_probability": 0.0,
+      "correct": false
+    },
+    {
+      "image": "0058_019_06.png",
+      "true_class": "Fuzzyball",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 1.0,
+      "stage1_probability": 0.0,
+      "correct": false
+    },
+    {
+      "image": "0066_023_01.png",
+      "true_class": "Crease",
+      "predicted": "Defective",
+      "predicted_class": "Crease",
+      "confidence": 0.377234,
+      "stage1_probability": 0.497498,
+      "correct": true
+    },
+    {
+      "image": "0073_010_03.png",
+      "true_class": "Broken Pick",
+      "predicted": "Defective",
+      "predicted_class": "Broken Pick",
+      "confidence": 0.33495,
+      "stage1_probability": 0.663312,
+      "correct": true
+    },
+    {
+      "image": "0075_010_03.png",
+      "true_class": "Broken Pick",
+      "predicted": "Defective",
+      "predicted_class": "Broken Pick",
+      "confidence": 0.69816,
+      "stage1_probability": 0.784388,
+      "correct": true
+    },
+    {
+      "image": "0076_030_03.png",
+      "true_class": "Nep",
+      "predicted": "Defective",
+      "predicted_class": "Broken Pick",
+      "confidence": 0.706322,
+      "stage1_probability": 0.78264,
+      "correct": true
+    },
+    {
+      "image": "0088_030_02.png",
+      "true_class": "Nep",
+      "predicted": "Defective",
+      "predicted_class": "Broken Yarn",
+      "confidence": 0.707179,
+      "stage1_probability": 0.473764,
+      "correct": true
+    },
+    {
+      "image": "0101_022_03.png",
+      "true_class": "Cut Selvage",
+      "predicted": "Defective",
+      "predicted_class": "Broken Pick",
+      "confidence": 0.308129,
+      "stage1_probability": 0.699419,
+      "correct": true
+    },
+    {
+      "image": "0107_025_03.png",
+      "true_class": "Warp Ball",
+      "predicted": "Defective",
+      "predicted_class": "Broken Pick",
+      "confidence": 0.322423,
+      "stage1_probability": 0.676408,
+      "correct": true
+    },
+    {
+      "image": "0017_000_05.png",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 1.0,
+      "stage1_probability": 0.0,
+      "correct": true
+    },
+    {
+      "image": "0018_000_05.png",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 1.0,
+      "stage1_probability": 0.0,
+      "correct": true
+    },
+    {
+      "image": "0001_000_02.png",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 0.508964,
+      "stage1_probability": 0.491036,
+      "correct": true
+    },
+    {
+      "image": "0007_000_02.png",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 0.503754,
+      "stage1_probability": 0.496246,
+      "correct": true
+    },
+    {
+      "image": "0014_000_02.png",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 1.0,
+      "stage1_probability": 0.0,
+      "correct": true
+    },
+    {
+      "image": "0015_000_02.png",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 1.0,
+      "stage1_probability": 0.0,
+      "correct": true
+    },
+    {
+      "image": "0016_000_02.png",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 1.0,
+      "stage1_probability": 0.0,
+      "correct": true
+    },
+    {
+      "image": "0019_000_02.png",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 1.0,
+      "stage1_probability": 0.0,
+      "correct": true
+    },
+    {
+      "image": "0011_000_04.png",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 0.531648,
+      "stage1_probability": 0.468352,
+      "correct": true
+    },
+    {
+      "image": "0012_000_04.png",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 0.52737,
+      "stage1_probability": 0.47263,
+      "correct": true
+    },
+    {
+      "image": "0015_000_04.png",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 0.529182,
+      "stage1_probability": 0.470818,
+      "correct": true
+    },
+    {
+      "image": "0013_000_03.png",
+      "true_class": "Normal",
+      "predicted": "Defective",
+      "predicted_class": "Broken Pick",
+      "confidence": 0.334428,
+      "stage1_probability": 0.657877,
+      "correct": false
+    },
+    {
+      "image": "0001_000_00.png",
+      "true_class": "Normal",
+      "predicted": "Defective",
+      "predicted_class": "Cut Selvage",
+      "confidence": 0.523914,
+      "stage1_probability": 0.611312,
+      "correct": false
+    },
+    {
+      "image": "0010_000_00.png",
+      "true_class": "Normal",
+      "predicted": "Defective",
+      "predicted_class": "Cut Selvage",
+      "confidence": 0.540254,
+      "stage1_probability": 0.610603,
+      "correct": false
+    },
+    {
+      "image": "0015_000_00.png",
+      "true_class": "Normal",
+      "predicted": "Defective",
+      "predicted_class": "Cut Selvage",
+      "confidence": 0.263364,
+      "stage1_probability": 0.52539,
+      "correct": false
+    },
+    {
+      "image": "0005_000_06.png",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 1.0,
+      "stage1_probability": 0.0,
+      "correct": true
+    },
+    {
+      "image": "0013_000_06.png",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 1.0,
+      "stage1_probability": 0.0,
+      "correct": true
+    },
+    {
+      "image": "0018_000_06.png",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 1.0,
+      "stage1_probability": 0.0,
+      "correct": true
+    },
+    {
+      "image": "0006_000_01.png",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 0.541292,
+      "stage1_probability": 0.458708,
+      "correct": true
+    },
+    {
+      "image": "0007_000_01.png",
+      "true_class": "Normal",
+      "predicted": "Defective",
+      "predicted_class": "Broken End",
+      "confidence": 0.705958,
+      "stage1_probability": 0.472458,
+      "correct": false
+    },
+    {
+      "image": "0019_000_01.png",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 0.53355,
+      "stage1_probability": 0.46645,
+      "correct": true
+    }
+  ],
+  "localization_per_image": [
+    {
+      "image": "0001_002_00.png",
+      "dice": 0.022931,
+      "iou": 0.011627,
+      "precision": 0.012418,
+      "recall": 0.154255,
+      "bounding_box": {
+        "x_min": 1289,
+        "y_min": 9,
+        "x_max": 4073,
+        "y_max": 249,
+        "width": 2785,
+        "height": 241
+      }
+    },
+    {
+      "image": "0010_006_02.png",
+      "dice": 0.51173,
+      "iou": 0.343926,
+      "precision": 0.399048,
+      "recall": 0.71345,
+      "bounding_box": {
+        "x_min": 1673,
+        "y_min": 3,
+        "x_max": 3227,
+        "y_max": 253,
+        "width": 1555,
+        "height": 251
+      }
+    },
+    {
+      "image": "0020_016_03.png",
+      "dice": 0.143604,
+      "iou": 0.077415,
+      "precision": 0.077994,
+      "recall": 0.912519,
+      "bounding_box": {
+        "x_min": 1188,
+        "y_min": 148,
+        "x_max": 1535,
+        "y_max": 193,
+        "width": 348,
+        "height": 46
+      }
+    },
+    {
+      "image": "0028_019_02.png",
+      "dice": 0.035714,
+      "iou": 0.035714,
+      "precision": 0.083333,
+      "recall": 0.058824,
+      "bounding_box": {
+        "x_min": 1965,
+        "y_min": 137,
+        "x_max": 2278,
+        "y_max": 148,
+        "width": 314,
+        "height": 12
+      }
+    },
+    {
+      "image": "0053_019_03.png",
+      "dice": 0.157895,
+      "iou": 0.111111,
+      "precision": 0.666667,
+      "recall": 0.117647,
+      "bounding_box": {
+        "x_min": 1608,
+        "y_min": 48,
+        "x_max": 1609,
+        "y_max": 48,
+        "width": 2,
+        "height": 1
+      }
+    },
+    {
+      "image": "0054_019_03.png",
+      "dice": 0.41358,
+      "iou": 0.263566,
+      "precision": 0.274194,
+      "recall": 0.871795,
+      "bounding_box": {
+        "x_min": 1335,
+        "y_min": 179,
+        "x_max": 1349,
+        "y_max": 189,
+        "width": 15,
+        "height": 11
+      }
+    },
+    {
+      "image": "0066_023_01.png",
+      "dice": 0.002387,
+      "iou": 0.001205,
+      "precision": 0.001214,
+      "recall": 0.131915,
+      "bounding_box": {
+        "x_min": 1295,
+        "y_min": 2,
+        "x_max": 4087,
+        "y_max": 254,
+        "width": 2793,
+        "height": 253
+      }
+    },
+    {
+      "image": "0073_010_03.png",
+      "dice": 0.145514,
+      "iou": 0.078508,
+      "precision": 0.121692,
+      "recall": 0.181155,
+      "bounding_box": {
+        "x_min": 1026,
+        "y_min": 2,
+        "x_max": 2427,
+        "y_max": 253,
+        "width": 1402,
+        "height": 252
+      }
+    },
+    {
+      "image": "0075_010_03.png",
+      "dice": 0.106534,
+      "iou": 0.056271,
+      "precision": 0.068547,
+      "recall": 0.239078,
+      "bounding_box": {
+        "x_min": 1032,
+        "y_min": 39,
+        "x_max": 4076,
+        "y_max": 227,
+        "width": 3045,
+        "height": 189
+      }
+    },
+    {
+      "image": "0076_030_03.png",
+      "dice": 0.412322,
+      "iou": 0.260143,
+      "precision": 0.261705,
+      "recall": 0.977578,
+      "bounding_box": {
+        "x_min": 2336,
+        "y_min": 15,
+        "x_max": 2959,
+        "y_max": 51,
+        "width": 624,
+        "height": 37
+      }
+    },
+    {
+      "image": "0088_030_02.png",
+      "dice": 0.025641,
+      "iou": 0.013972,
+      "precision": 0.304348,
+      "recall": 0.014433,
+      "bounding_box": {
+        "x_min": 2172,
+        "y_min": 92,
+        "x_max": 2700,
+        "y_max": 192,
+        "width": 529,
+        "height": 101
+      }
+    },
+    {
+      "image": "0101_022_03.png",
+      "dice": 0.124242,
+      "iou": 0.067742,
+      "precision": 0.3,
+      "recall": 0.08046,
+      "bounding_box": {
+        "x_min": 1298,
+        "y_min": 9,
+        "x_max": 1319,
+        "y_max": 24,
+        "width": 22,
+        "height": 16
+      }
+    },
+    {
+      "image": "0107_025_03.png",
+      "dice": 0.04,
+      "iou": 0.04,
+      "precision": 1.0,
+      "recall": 0.04,
+      "bounding_box": null
+    }
+  ],
+  "dataset_limitations": {
+    "single_image_classes": [
+      "Contamination",
+      "Knots",
+      "Weft Crack"
+    ],
+    "note": "Knots, Contamination and Weft Crack have exactly one original image each. They stay entirely in the train split, so they have no validation or test samples and their per-class scores are undefined rather than zero."
+  }
+}

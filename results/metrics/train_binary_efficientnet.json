@@ -1,0 +1,94 @@
+{
+  "stage": "binary",
+  "model": "efficientnet",
+  "class_names": [
+    "Normal",
+    "Defective"
+  ],
+  "epochs_requested": 2,
+  "epochs_run": 2,
+  "best_epoch": 2,
+  "winning_phase": "fine_tune",
+  "phase1_best_val_balanced_accuracy": 0.25,
+  "phase1_best_epoch": 1,
+  "phase2_best_val_balanced_accuracy": 0.5,
+  "phase2_best_epoch": 2,
+  "selection_metric": "balanced_accuracy",
+  "best_val_balanced_accuracy": 0.5,
+  "best_val_accuracy": 0.5,
+  "val_balanced_accuracy": 0.5,
+  "val_recall_normal": 0.0,
+  "val_recall_defective": 1.0,
+  "final_val_balanced_accuracy": 0.5,
+  "final_val_accuracy": 0.5,
+  "early_stopped": false,
+  "balanced_sampler": false,
+  "defect_patch_threshold": 0.0002,
+  "finetune": true,
+  "unfrozen_blocks": [
+    "features.5",
+    "features.6",
+    "features.7",
+    "features.8"
+  ],
+  "finetune_info": {
+    "unfrozen_blocks": [
+      "features.5",
+      "features.6",
+      "features.7",
+      "features.8"
+    ],
+    "unfreeze_from_block": 5,
+    "finetune_lr": 3e-05,
+    "phase2_started": true
+  },
+  "train_patch_distribution": {
+    "Normal": 8,
+    "Defective": 8
+  },
+  "val_patch_distribution": {
+    "Normal": 4,
+    "Defective": 4
+  },
+  "train_patch_sources": {
+    "synthetic": 16
+  },
+  "train_binary_labels": {
+    "Normal": 8,
+    "Defective": 8
+  },
+  "val_binary_labels": {
+    "Normal": 4,
+    "Defective": 4
+  },
+  "history": {
+    "train_loss": [
+      0.6931642889976501,
+      0.7059495449066162
+    ],
+    "val_loss": [
+      0.6983018517494202,
+      0.693084180355072
+    ],
+    "train_acc": [
+      0.5625,
+      0.5
+    ],
+    "val_acc": [
+      0.25,
+      0.5
+    ],
+    "train_bal_acc": [
+      0.5625,
+      0.5
+    ],
+    "val_bal_acc": [
+      0.25,
+      0.5
+    ],
+    "phase": [
+      "head",
+      "fine_tune"
+    ]
+  }
+}

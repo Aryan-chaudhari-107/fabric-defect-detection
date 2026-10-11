@@ -1,0 +1,1668 @@
+{
+  "model": "efficientnet",
+  "image_level_thresholds": {
+    "stage1_prob_threshold": 0.6,
+    "stage1_prob_threshold_source": "tuned validation threshold (stage1_thresholds_efficientnet.json)",
+    "min_defective_patches": 2,
+    "min_defective_patches_source": "tuned validation threshold (stage1_thresholds_efficientnet.json)"
+  },
+  "stages": {
+    "binary_patch_level": {
+      "samples": 164,
+      "accuracy": 0.8719512195121951,
+      "balanced_accuracy": 0.8975113122171945,
+      "macro_precision_all_classes": 0.8048759326739545,
+      "macro_recall_all_classes": 0.8975113122171945,
+      "macro_f1_all_classes": 0.8332607116920843,
+      "macro_precision_support_ge3": 0.8048759326739545,
+      "macro_recall_support_ge3": 0.8975113122171945,
+      "macro_f1_support_ge3": 0.8332607116920843,
+      "supported_classes_count": 2,
+      "insufficient_data_classes": [],
+      "weighted_f1": 0.8802770249924722,
+      "present_classes": [
+        "Normal",
+        "Defective"
+      ],
+      "absent_classes": [],
+      "per_class": {
+        "Normal": {
+          "precision": 0.9823008849557522,
+          "recall": 0.8538461538461538,
+          "f1": 0.9135802469135802,
+          "support": 130,
+          "present_in_split": true,
+          "sufficient_data": true
+        },
+        "Defective": {
+          "precision": 0.6274509803921569,
+          "recall": 0.9411764705882353,
+          "f1": 0.7529411764705882,
+          "support": 34,
+          "present_in_split": true,
+          "sufficient_data": true
+        }
+      },
+      "confusion_matrix": [
+        [
+          111,
+          19
+        ],
+        [
+          2,
+          32
+        ]
+      ],
+      "mean_confidence": 0.776862382888794
+    },
+    "defect_type_patch_level": {
+      "samples": 34,
+      "accuracy": 0.4117647058823529,
+      "balanced_accuracy": 0.3304093567251462,
+      "macro_precision_all_classes": 0.16111111111111112,
+      "macro_recall_all_classes": 0.24780701754385967,
+      "macro_f1_all_classes": 0.16221771060480739,
+      "macro_precision_support_ge3": 0.675,
+      "macro_recall_support_ge3": 0.48684210526315785,
+      "macro_f1_support_ge3": 0.563049853372434,
+      "supported_classes_count": 2,
+      "insufficient_data_classes": [
+        "Broken End",
+        "Broken Yarn",
+        "Weft Curling",
+        "Cut Selvage",
+        "Crease",
+        "Warp Ball",
+        "Knots",
+        "Contamination",
+        "Nep",
+        "Weft Crack"
+      ],
+      "weighted_f1": 0.444867592875183,
+      "present_classes": [
+        "Broken End",
+        "Broken Yarn",
+        "Broken Pick",
+        "Weft Curling",
+        "Fuzzyball",
+        "Cut Selvage",
+        "Crease",
+        "Warp Ball",
+        "Nep"
+      ],
+      "absent_classes": [
+        "Knots",
+        "Contamination",
+        "Weft Crack"
+      ],
+      "per_class": {
+        "Broken End": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1,
+          "present_in_split": true,
+          "sufficient_data": false
+        },
+        "Broken Yarn": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666,
+          "support": 1,
+          "present_in_split": true,
+          "sufficient_data": false
+        },
+        "Broken Pick": {
+          "precision": 0.75,
+          "recall": 0.47368421052631576,
+          "f1": 0.5806451612903226,
+          "support": 19,
+          "present_in_split": true,
+          "sufficient_data": true
+        },
+        "Weft Curling": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2,
+          "present_in_split": true,
+          "sufficient_data": false
+        },
+        "Fuzzyball": {
+          "precision": 0.6,
+          "recall": 0.5,
+          "f1": 0.5454545454545454,
+          "support": 6,
+          "present_in_split": true,
+          "sufficient_data": true
+        },
+        "Cut Selvage": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1,
+          "present_in_split": true,
+          "sufficient_data": false
+        },
+        "Crease": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1,
+          "present_in_split": true,
+          "sufficient_data": false
+        },
+        "Warp Ball": {
+          "precision": 0.08333333333333333,
+          "recall": 1.0,
+          "f1": 0.15384615384615385,
+          "support": 1,
+          "present_in_split": true,
+          "sufficient_data": false
+        },
+        "Knots": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0,
+          "present_in_split": false,
+          "sufficient_data": false
+        },
+        "Contamination": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0,
+          "present_in_split": false,
+          "sufficient_data": false
+        },
+        "Nep": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2,
+          "present_in_split": true,
+          "sufficient_data": false
+        },
+        "Weft Crack": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0,
+          "present_in_split": false,
+          "sufficient_data": false
+        }
+      },
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          9,
+          2,
+          0,
+          0,
+          0,
+          8,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          3,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_confidence": 0.20273929834365845
+    },
+    "image_level": {
+      "binary": {
+        "samples": 37,
+        "accuracy": 0.918918918918919,
+        "balanced_accuracy": 0.9136904761904762,
+        "macro_precision_all_classes": 0.9212121212121211,
+        "macro_recall_all_classes": 0.9136904761904762,
+        "macro_f1_all_classes": 0.9167291822955739,
+        "macro_precision_support_ge3": 0.9212121212121211,
+        "macro_recall_support_ge3": 0.9136904761904762,
+        "macro_f1_support_ge3": 0.9167291822955739,
+        "supported_classes_count": 2,
+        "insufficient_data_classes": [],
+        "weighted_f1": 0.9185539628150281,
+        "present_classes": [
+          "Normal",
+          "Defective"
+        ],
+        "absent_classes": [],
+        "per_class": {
+          "Normal": {
+            "precision": 0.9090909090909091,
+            "recall": 0.9523809523809523,
+            "f1": 0.9302325581395349,
+            "support": 21,
+            "present_in_split": true,
+            "sufficient_data": true
+          },
+          "Defective": {
+            "precision": 0.9333333333333333,
+            "recall": 0.875,
+            "f1": 0.9032258064516129,
+            "support": 16,
+            "present_in_split": true,
+            "sufficient_data": true
+          }
+        },
+        "confusion_matrix": [
+          [
+            20,
+            1
+          ],
+          [
+            2,
+            14
+          ]
+        ],
+        "defect_recall": 0.875,
+        "defect_recall_ci95": [
+          0.6398,
+          0.965
+        ],
+        "normal_false_positive_rate": 0.047619047619047616,
+        "normal_fpr_ci95": [
+          0.0085,
+          0.2267
+        ],
+        "balanced_accuracy_ci95": [
+          0.7066,
+          0.9783
+        ],
+        "tp": 14,
+        "fp": 1,
+        "tn": 20,
+        "fn": 2,
+        "per_fabric_roll": {
+          "roll_00": {
+            "total_images": 4,
+            "defective_images": 1,
+            "normal_images": 3,
+            "tp": 0,
+            "fp": 0,
+            "tn": 3,
+            "fn": 1,
+            "accuracy": 0.75,
+            "balanced_accuracy": 0.5,
+            "defect_recall": 0.0,
+            "normal_fpr": 0.0
+          },
+          "roll_01": {
+            "total_images": 4,
+            "defective_images": 1,
+            "normal_images": 3,
+            "tp": 1,
+            "fp": 0,
+            "tn": 3,
+            "fn": 0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0,
+            "defect_recall": 1.0,
+            "normal_fpr": 0.0
+          },
+          "roll_02": {
+            "total_images": 10,
+            "defective_images": 4,
+            "normal_images": 6,
+            "tp": 4,
+            "fp": 0,
+            "tn": 6,
+            "fn": 0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0,
+            "defect_recall": 1.0,
+            "normal_fpr": 0.0
+          },
+          "roll_03": {
+            "total_images": 9,
+            "defective_images": 8,
+            "normal_images": 1,
+            "tp": 8,
+            "fp": 1,
+            "tn": 0,
+            "fn": 0,
+            "accuracy": 0.8889,
+            "balanced_accuracy": 0.5,
+            "defect_recall": 1.0,
+            "normal_fpr": 1.0
+          },
+          "roll_04": {
+            "total_images": 3,
+            "defective_images": 0,
+            "normal_images": 3,
+            "tp": 0,
+            "fp": 0,
+            "tn": 3,
+            "fn": 0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0,
+            "defect_recall": 0.0,
+            "normal_fpr": 0.0
+          },
+          "roll_05": {
+            "total_images": 2,
+            "defective_images": 0,
+            "normal_images": 2,
+            "tp": 0,
+            "fp": 0,
+            "tn": 2,
+            "fn": 0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0,
+            "defect_recall": 0.0,
+            "normal_fpr": 0.0
+          },
+          "roll_06": {
+            "total_images": 5,
+            "defective_images": 2,
+            "normal_images": 3,
+            "tp": 1,
+            "fp": 0,
+            "tn": 3,
+            "fn": 1,
+            "accuracy": 0.8,
+            "balanced_accuracy": 0.75,
+            "defect_recall": 0.5,
+            "normal_fpr": 0.0
+          }
+        }
+      },
+      "defect_type": {
+        "samples": 14,
+        "accuracy": 0.42857142857142855,
+        "balanced_accuracy": 0.325,
+        "macro_precision_all_classes": 0.1488095238095238,
+        "macro_recall_all_classes": 0.21666666666666667,
+        "macro_f1_all_classes": 0.1550925925925926,
+        "macro_precision_support_ge3": 1.0,
+        "macro_recall_support_ge3": 0.6,
+        "macro_f1_support_ge3": 0.75,
+        "supported_classes_count": 1,
+        "insufficient_data_classes": [
+          "Broken End",
+          "Broken Yarn",
+          "Broken Pick",
+          "Weft Curling",
+          "Cut Selvage",
+          "Crease",
+          "Warp Ball",
+          "Knots",
+          "Contamination",
+          "Nep",
+          "Weft Crack"
+        ],
+        "weighted_f1": 0.37896825396825395,
+        "present_classes": [
+          "Broken Yarn",
+          "Broken Pick",
+          "Weft Curling",
+          "Fuzzyball",
+          "Cut Selvage",
+          "Crease",
+          "Warp Ball",
+          "Knots",
+          "Nep"
+        ],
+        "absent_classes": [
+          "Broken End",
+          "Knots",
+          "Contamination",
+          "Weft Crack"
+        ],
+        "per_class": {
+          "Broken End": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0,
+            "present_in_split": false,
+            "sufficient_data": false
+          },
+          "Broken Yarn": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666,
+            "support": 1,
+            "present_in_split": true,
+            "sufficient_data": false
+          },
+          "Broken Pick": {
+            "precision": 0.2857142857142857,
+            "recall": 1.0,
+            "f1": 0.4444444444444444,
+            "support": 2,
+            "present_in_split": true,
+            "sufficient_data": false
+          },
+          "Weft Curling": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "present_in_split": true,
+            "sufficient_data": false
+          },
+          "Fuzzyball": {
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1": 0.75,
+            "support": 5,
+            "present_in_split": true,
+            "sufficient_data": true
+          },
+          "Cut Selvage": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "present_in_split": true,
+            "sufficient_data": false
+          },
+          "Crease": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "present_in_split": true,
+            "sufficient_data": false
+          },
+          "Warp Ball": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "present_in_split": true,
+            "sufficient_data": false
+          },
+          "Knots": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0,
+            "present_in_split": false,
+            "sufficient_data": false
+          },
+          "Contamination": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0,
+            "present_in_split": false,
+            "sufficient_data": false
+          },
+          "Nep": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 2,
+            "present_in_split": true,
+            "sufficient_data": false
+          },
+          "Weft Crack": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0,
+            "present_in_split": false,
+            "sufficient_data": false
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    "segmentation_patch_level": {
+      "dice": 0.12977214200156076,
+      "iou": 0.08468240201473236,
+      "precision": 0.3733445712498256,
+      "recall": 0.2638099619320461
+    },
+    "segmentation_image_level": {
+      "scored_images": 14,
+      "skipped_images": 0,
+      "box_touch_rate": 0.5714,
+      "mean_dice": 0.157497,
+      "mean_iou": 0.104632,
+      "mean_precision": 0.280885,
+      "mean_recall": 0.307564
+    }
+  },
+  "image_level_predictions": [
+    {
+      "image": "0001_002_00.png",
+      "fabric_roll": "00",
+      "true_class": "Broken End",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 0.02706,
+      "stage1_probability": 0.97294,
+      "max_patch_defect_prob": 0.9729,
+      "flagged_patches_count": 1,
+      "correct": false
+    },
+    {
+      "image": "0010_006_02.png",
+      "fabric_roll": "02",
+      "true_class": "Broken Yarn",
+      "predicted": "Defective",
+      "predicted_class": "Broken Yarn",
+      "confidence": 0.272946,
+      "stage1_probability": 0.844691,
+      "max_patch_defect_prob": 0.9768,
+      "flagged_patches_count": 2,
+      "correct": true
+    },
+    {
+      "image": "0020_016_03.png",
+      "fabric_roll": "03",
+      "true_class": "Weft Curling",
+      "predicted": "Defective",
+      "predicted_class": "Broken Pick",
+      "confidence": 0.199234,
+      "stage1_probability": 0.75128,
+      "max_patch_defect_prob": 0.7887,
+      "flagged_patches_count": 11,
+      "correct": true
+    },
+    {
+      "image": "0022_019_02.png",
+      "fabric_roll": "02",
+      "true_class": "Fuzzyball",
+      "predicted": "Defective",
+      "predicted_class": "Fuzzyball",
+      "confidence": 0.19676,
+      "stage1_probability": 0.676816,
+      "max_patch_defect_prob": 0.8114,
+      "flagged_patches_count": 6,
+      "correct": true
+    },
+    {
+      "image": "0028_019_02.png",
+      "fabric_roll": "02",
+      "true_class": "Fuzzyball",
+      "predicted": "Defective",
+      "predicted_class": "Fuzzyball",
+      "confidence": 0.208344,
+      "stage1_probability": 0.652592,
+      "max_patch_defect_prob": 0.7693,
+      "flagged_patches_count": 5,
+      "correct": true
+    },
+    {
+      "image": "0053_019_03.png",
+      "fabric_roll": "03",
+      "true_class": "Fuzzyball",
+      "predicted": "Defective",
+      "predicted_class": "Broken Pick",
+      "confidence": 0.201748,
+      "stage1_probability": 0.740531,
+      "max_patch_defect_prob": 0.7801,
+      "flagged_patches_count": 11,
+      "correct": true
+    },
+    {
+      "image": "0054_019_03.png",
+      "fabric_roll": "03",
+      "true_class": "Fuzzyball",
+      "predicted": "Defective",
+      "predicted_class": "Broken Pick",
+      "confidence": 0.19638,
+      "stage1_probability": 0.746591,
+      "max_patch_defect_prob": 0.7908,
+      "flagged_patches_count": 10,
+      "correct": true
+    },
+    {
+      "image": "0057_019_06.png",
+      "fabric_roll": "06",
+      "true_class": "Fuzzyball",
+      "predicted": "Defective",
+      "predicted_class": "Fuzzyball",
+      "confidence": 0.142701,
+      "stage1_probability": 0.914553,
+      "max_patch_defect_prob": 0.9351,
+      "flagged_patches_count": 2,
+      "correct": true
+    },
+    {
+      "image": "0058_019_06.png",
+      "fabric_roll": "06",
+      "true_class": "Fuzzyball",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 0.057644,
+      "stage1_probability": 0.942356,
+      "max_patch_defect_prob": 0.9424,
+      "flagged_patches_count": 1,
+      "correct": false
+    },
+    {
+      "image": "0066_023_01.png",
+      "fabric_roll": "01",
+      "true_class": "Crease",
+      "predicted": "Defective",
+      "predicted_class": "Knots",
+      "confidence": 0.149423,
+      "stage1_probability": 0.79756,
+      "max_patch_defect_prob": 0.8098,
+      "flagged_patches_count": 2,
+      "correct": true
+    },
+    {
+      "image": "0073_010_03.png",
+      "fabric_roll": "03",
+      "true_class": "Broken Pick",
+      "predicted": "Defective",
+      "predicted_class": "Broken Pick",
+      "confidence": 0.198724,
+      "stage1_probability": 0.724842,
+      "max_patch_defect_prob": 0.7785,
+      "flagged_patches_count": 9,
+      "correct": true
+    },
+    {
+      "image": "0075_010_03.png",
+      "fabric_roll": "03",
+      "true_class": "Broken Pick",
+      "predicted": "Defective",
+      "predicted_class": "Broken Pick",
+      "confidence": 0.200239,
+      "stage1_probability": 0.794842,
+      "max_patch_defect_prob": 0.889,
+      "flagged_patches_count": 12,
+      "correct": true
+    },
+    {
+      "image": "0076_030_03.png",
+      "fabric_roll": "03",
+      "true_class": "Nep",
+      "predicted": "Defective",
+      "predicted_class": "Warp Ball",
+      "confidence": 0.20509,
+      "stage1_probability": 0.78074,
+      "max_patch_defect_prob": 0.8072,
+      "flagged_patches_count": 12,
+      "correct": true
+    },
+    {
+      "image": "0088_030_02.png",
+      "fabric_roll": "02",
+      "true_class": "Nep",
+      "predicted": "Defective",
+      "predicted_class": "Broken Yarn",
+      "confidence": 0.165828,
+      "stage1_probability": 0.762776,
+      "max_patch_defect_prob": 0.9704,
+      "flagged_patches_count": 3,
+      "correct": true
+    },
+    {
+      "image": "0101_022_03.png",
+      "fabric_roll": "03",
+      "true_class": "Cut Selvage",
+      "predicted": "Defective",
+      "predicted_class": "Broken Pick",
+      "confidence": 0.19864,
+      "stage1_probability": 0.762277,
+      "max_patch_defect_prob": 0.8423,
+      "flagged_patches_count": 8,
+      "correct": true
+    },
+    {
+      "image": "0107_025_03.png",
+      "fabric_roll": "03",
+      "true_class": "Warp Ball",
+      "predicted": "Defective",
+      "predicted_class": "Broken Pick",
+      "confidence": 0.197491,
+      "stage1_probability": 0.73785,
+      "max_patch_defect_prob": 0.788,
+      "flagged_patches_count": 9,
+      "correct": true
+    },
+    {
+      "image": "0017_000_05.png",
+      "fabric_roll": "05",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 1.0,
+      "stage1_probability": 0.0,
+      "max_patch_defect_prob": 0.4051,
+      "flagged_patches_count": 0,
+      "correct": true
+    },
+    {
+      "image": "0018_000_05.png",
+      "fabric_roll": "05",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 1.0,
+      "stage1_probability": 0.0,
+      "max_patch_defect_prob": 0.1982,
+      "flagged_patches_count": 0,
+      "correct": true
+    },
+    {
+      "image": "0001_000_02.png",
+      "fabric_roll": "02",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 0.38141,
+      "stage1_probability": 0.61859,
+      "max_patch_defect_prob": 0.6186,
+      "flagged_patches_count": 1,
+      "correct": true
+    },
+    {
+      "image": "0007_000_02.png",
+      "fabric_roll": "02",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 0.375495,
+      "stage1_probability": 0.624505,
+      "max_patch_defect_prob": 0.6245,
+      "flagged_patches_count": 1,
+      "correct": true
+    },
+    {
+      "image": "0014_000_02.png",
+      "fabric_roll": "02",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 1.0,
+      "stage1_probability": 0.0,
+      "max_patch_defect_prob": 0.5596,
+      "flagged_patches_count": 0,
+      "correct": true
+    },
+    {
+      "image": "0015_000_02.png",
+      "fabric_roll": "02",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 0.323463,
+      "stage1_probability": 0.676537,
+      "max_patch_defect_prob": 0.6765,
+      "flagged_patches_count": 1,
+      "correct": true
+    },
+    {
+      "image": "0016_000_02.png",
+      "fabric_roll": "02",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 0.262849,
+      "stage1_probability": 0.737151,
+      "max_patch_defect_prob": 0.7372,
+      "flagged_patches_count": 1,
+      "correct": true
+    },
+    {
+      "image": "0019_000_02.png",
+      "fabric_roll": "02",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 0.282115,
+      "stage1_probability": 0.717885,
+      "max_patch_defect_prob": 0.7179,
+      "flagged_patches_count": 1,
+      "correct": true
+    },
+    {
+      "image": "0011_000_04.png",
+      "fabric_roll": "04",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 0.25623,
+      "stage1_probability": 0.74377,
+      "max_patch_defect_prob": 0.7438,
+      "flagged_patches_count": 1,
+      "correct": true
+    },
+    {
+      "image": "0012_000_04.png",
+      "fabric_roll": "04",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 0.231041,
+      "stage1_probability": 0.768959,
+      "max_patch_defect_prob": 0.769,
+      "flagged_patches_count": 1,
+      "correct": true
+    },
+    {
+      "image": "0015_000_04.png",
+      "fabric_roll": "04",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 0.196432,
+      "stage1_probability": 0.803568,
+      "max_patch_defect_prob": 0.8036,
+      "flagged_patches_count": 1,
+      "correct": true
+    },
+    {
+      "image": "0013_000_03.png",
+      "fabric_roll": "03",
+      "true_class": "Normal",
+      "predicted": "Defective",
+      "predicted_class": "Broken Pick",
+      "confidence": 0.198334,
+      "stage1_probability": 0.738687,
+      "max_patch_defect_prob": 0.786,
+      "flagged_patches_count": 9,
+      "correct": false
+    },
+    {
+      "image": "0001_000_00.png",
+      "fabric_roll": "00",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 1.0,
+      "stage1_probability": 0.0,
+      "max_patch_defect_prob": 0.5156,
+      "flagged_patches_count": 0,
+      "correct": true
+    },
+    {
+      "image": "0010_000_00.png",
+      "fabric_roll": "00",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 1.0,
+      "stage1_probability": 0.0,
+      "max_patch_defect_prob": 0.5483,
+      "flagged_patches_count": 0,
+      "correct": true
+    },
+    {
+      "image": "0015_000_00.png",
+      "fabric_roll": "00",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 1.0,
+      "stage1_probability": 0.0,
+      "max_patch_defect_prob": 0.3255,
+      "flagged_patches_count": 0,
+      "correct": true
+    },
+    {
+      "image": "0005_000_06.png",
+      "fabric_roll": "06",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 1.0,
+      "stage1_probability": 0.0,
+      "max_patch_defect_prob": 0.483,
+      "flagged_patches_count": 0,
+      "correct": true
+    },
+    {
+      "image": "0013_000_06.png",
+      "fabric_roll": "06",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 0.106597,
+      "stage1_probability": 0.893403,
+      "max_patch_defect_prob": 0.8934,
+      "flagged_patches_count": 1,
+      "correct": true
+    },
+    {
+      "image": "0018_000_06.png",
+      "fabric_roll": "06",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 0.026635,
+      "stage1_probability": 0.973365,
+      "max_patch_defect_prob": 0.9734,
+      "flagged_patches_count": 1,
+      "correct": true
+    },
+    {
+      "image": "0006_000_01.png",
+      "fabric_roll": "01",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 1.0,
+      "stage1_probability": 0.0,
+      "max_patch_defect_prob": 0.4355,
+      "flagged_patches_count": 0,
+      "correct": true
+    },
+    {
+      "image": "0007_000_01.png",
+      "fabric_roll": "01",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 1.0,
+      "stage1_probability": 0.0,
+      "max_patch_defect_prob": 0.5631,
+      "flagged_patches_count": 0,
+      "correct": true
+    },
+    {
+      "image": "0019_000_01.png",
+      "fabric_roll": "01",
+      "true_class": "Normal",
+      "predicted": "Normal",
+      "predicted_class": "Normal",
+      "confidence": 0.393044,
+      "stage1_probability": 0.606956,
+      "max_patch_defect_prob": 0.607,
+      "flagged_patches_count": 1,
+      "correct": true
+    }
+  ],
+  "misclassified_images": [
+    {
+      "image": "0001_002_00.png",
+      "fabric_roll": "00",
+      "true_class": "Broken End",
+      "predicted": "Normal",
+      "predicted_defect_type": "Normal",
+      "max_patch_defect_prob": 0.9729,
+      "flagged_patches_count": 1,
+      "stage1_threshold_used": 0.6,
+      "min_patches_required": 2
+    },
+    {
+      "image": "0058_019_06.png",
+      "fabric_roll": "06",
+      "true_class": "Fuzzyball",
+      "predicted": "Normal",
+      "predicted_defect_type": "Normal",
+      "max_patch_defect_prob": 0.9424,
+      "flagged_patches_count": 1,
+      "stage1_threshold_used": 0.6,
+      "min_patches_required": 2
+    },
+    {
+      "image": "0013_000_03.png",
+      "fabric_roll": "03",
+      "true_class": "Normal",
+      "predicted": "Defective",
+      "predicted_defect_type": "Broken Pick",
+      "max_patch_defect_prob": 0.786,
+      "flagged_patches_count": 9,
+      "stage1_threshold_used": 0.6,
+      "min_patches_required": 2
+    }
+  ],
+  "localization_per_image": [
+    {
+      "image": "0010_006_02.png",
+      "dice": 0.675478,
+      "iou": 0.510072,
+      "precision": 0.641491,
+      "recall": 0.71345,
+      "box_touch": true,
+      "bounding_box": {
+        "x_min": 259,
+        "y_min": 3,
+        "x_max": 3227,
+        "y_max": 253,
+        "width": 2969,
+        "height": 251
+      },
+      "gt_box": {
+        "x_min": 3165,
+        "y_min": 0,
+        "x_max": 3226,
+        "y_max": 255,
+        "width": 62,
+        "height": 256
+      }
+    },
+    {
+      "image": "0020_016_03.png",
+      "dice": 0.143604,
+      "iou": 0.077415,
+      "precision": 0.077994,
+      "recall": 0.912519,
+      "box_touch": true,
+      "bounding_box": {
+        "x_min": 1188,
+        "y_min": 148,
+        "x_max": 1535,
+        "y_max": 193,
+        "width": 348,
+        "height": 46
+      },
+      "gt_box": {
+        "x_min": 1200,
+        "y_min": 157,
+        "x_max": 1540,
+        "y_max": 183,
+        "width": 341,
+        "height": 27
+      }
+    },
+    {
+      "image": "0022_019_02.png",
+      "dice": 0.000101,
+      "iou": 0.000101,
+      "precision": 0.000101,
+      "recall": 0.033333,
+      "box_touch": false,
+      "bounding_box": {
+        "x_min": 260,
+        "y_min": 2,
+        "x_max": 433,
+        "y_max": 253,
+        "width": 174,
+        "height": 252
+      },
+      "gt_box": {
+        "x_min": 2697,
+        "y_min": 174,
+        "x_max": 2702,
+        "y_max": 179,
+        "width": 6,
+        "height": 6
+      }
+    },
+    {
+      "image": "0028_019_02.png",
+      "dice": 0.000876,
+      "iou": 0.000876,
+      "precision": 0.000888,
+      "recall": 0.058824,
+      "box_touch": false,
+      "bounding_box": {
+        "x_min": 261,
+        "y_min": 6,
+        "x_max": 299,
+        "y_max": 232,
+        "width": 39,
+        "height": 227
+      },
+      "gt_box": {
+        "x_min": 3807,
+        "y_min": 187,
+        "x_max": 3810,
+        "y_max": 191,
+        "width": 4,
+        "height": 5
+      }
+    },
+    {
+      "image": "0053_019_03.png",
+      "dice": 0.058824,
+      "iou": 0.058824,
+      "precision": 1.0,
+      "recall": 0.058824,
+      "box_touch": false,
+      "bounding_box": null,
+      "gt_box": {
+        "x_min": 1609,
+        "y_min": 45,
+        "x_max": 1612,
+        "y_max": 48,
+        "width": 4,
+        "height": 4
+      }
+    },
+    {
+      "image": "0054_019_03.png",
+      "dice": 0.416149,
+      "iou": 0.265625,
+      "precision": 0.276423,
+      "recall": 0.871795,
+      "box_touch": true,
+      "bounding_box": {
+        "x_min": 1335,
+        "y_min": 179,
+        "x_max": 1349,
+        "y_max": 189,
+        "width": 15,
+        "height": 11
+      },
+      "gt_box": {
+        "x_min": 1341,
+        "y_min": 179,
+        "x_max": 1349,
+        "y_max": 184,
+        "width": 9,
+        "height": 6
+      }
+    },
+    {
+      "image": "0057_019_06.png",
+      "dice": 0.000441,
+      "iou": 0.000441,
+      "precision": 0.000448,
+      "recall": 0.029412,
+      "box_touch": false,
+      "bounding_box": {
+        "x_min": 768,
+        "y_min": 2,
+        "x_max": 806,
+        "y_max": 253,
+        "width": 39,
+        "height": 252
+      },
+      "gt_box": {
+        "x_min": 2898,
+        "y_min": 49,
+        "x_max": 2904,
+        "y_max": 54,
+        "width": 7,
+        "height": 6
+      }
+    },
+    {
+      "image": "0066_023_01.png",
+      "dice": 0.009537,
+      "iou": 0.00483,
+      "precision": 0.004989,
+      "recall": 0.131915,
+      "box_touch": true,
+      "bounding_box": {
+        "x_min": 2069,
+        "y_min": 2,
+        "x_max": 4087,
+        "y_max": 253,
+        "width": 2019,
+        "height": 252
+      },
+      "gt_box": {
+        "x_min": 2239,
+        "y_min": 1,
+        "x_max": 2304,
+        "y_max": 255,
+        "width": 66,
+        "height": 255
+      }
+    },
+    {
+      "image": "0073_010_03.png",
+      "dice": 0.215257,
+      "iou": 0.120674,
+      "precision": 0.29342,
+      "recall": 0.170106,
+      "box_touch": true,
+      "bounding_box": {
+        "x_min": 1941,
+        "y_min": 216,
+        "x_max": 2409,
+        "y_max": 242,
+        "width": 469,
+        "height": 27
+      },
+      "gt_box": {
+        "x_min": 1101,
+        "y_min": 172,
+        "x_max": 2646,
+        "y_max": 246,
+        "width": 1546,
+        "height": 75
+      }
+    },
+    {
+      "image": "0075_010_03.png",
+      "dice": 0.103994,
+      "iou": 0.054856,
+      "precision": 0.067188,
+      "recall": 0.230109,
+      "box_touch": true,
+      "bounding_box": {
+        "x_min": 1032,
+        "y_min": 39,
+        "x_max": 4076,
+        "y_max": 227,
+        "width": 3045,
+        "height": 189
+      },
+      "gt_box": {
+        "x_min": 1085,
+        "y_min": 133,
+        "x_max": 4095,
+        "y_max": 234,
+        "width": 3011,
+        "height": 102
+      }
+    },
+    {
+      "image": "0076_030_03.png",
+      "dice": 0.415946,
+      "iou": 0.26303,
+      "precision": 0.264957,
+      "recall": 0.973094,
+      "box_touch": true,
+      "bounding_box": {
+        "x_min": 2342,
+        "y_min": 17,
+        "x_max": 2380,
+        "y_max": 51,
+        "width": 39,
+        "height": 35
+      },
+      "gt_box": {
+        "x_min": 2348,
+        "y_min": 24,
+        "x_max": 2373,
+        "y_max": 49,
+        "width": 26,
+        "height": 26
+      }
+    },
+    {
+      "image": "0088_030_02.png",
+      "dice": 0.000137,
+      "iou": 0.000137,
+      "precision": 0.000147,
+      "recall": 0.002062,
+      "box_touch": false,
+      "bounding_box": {
+        "x_min": 312,
+        "y_min": 2,
+        "x_max": 415,
+        "y_max": 253,
+        "width": 104,
+        "height": 252
+      },
+      "gt_box": {
+        "x_min": 2684,
+        "y_min": 63,
+        "x_max": 2706,
+        "y_max": 143,
+        "width": 23,
+        "height": 81
+      }
+    },
+    {
+      "image": "0101_022_03.png",
+      "dice": 0.12462,
+      "iou": 0.067961,
+      "precision": 0.304348,
+      "recall": 0.08046,
+      "box_touch": true,
+      "bounding_box": {
+        "x_min": 1298,
+        "y_min": 13,
+        "x_max": 1319,
+        "y_max": 24,
+        "width": 22,
+        "height": 12
+      },
+      "gt_box": {
+        "x_min": 1290,
+        "y_min": 4,
+        "x_max": 1314,
+        "y_max": 21,
+        "width": 25,
+        "height": 18
+      }
+    },
+    {
+      "image": "0107_025_03.png",
+      "dice": 0.04,
+      "iou": 0.04,
+      "precision": 1.0,
+      "recall": 0.04,
+      "box_touch": false,
+      "bounding_box": null,
+      "gt_box": {
+        "x_min": 1429,
+        "y_min": 68,
+        "x_max": 1433,
+        "y_max": 72,
+        "width": 5,
+        "height": 5
+      }
+    }
+  ],
+  "dataset_limitations": {
+    "single_image_classes": [
+      "Contamination",
+      "Knots",
+      "Weft Crack"
+    ],
+    "note": "Knots, Contamination and Weft Crack have exactly one original image each. They stay entirely in the train split, so they have no validation or test samples and their per-class scores are undefined rather than zero."
+  }
+}

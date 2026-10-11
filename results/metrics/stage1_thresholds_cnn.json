@@ -1,0 +1,233 @@
+{
+  "model": "cnn",
+  "best_stage1_prob_threshold": 0.45,
+  "best_min_defective_patches": 4,
+  "val_balanced_accuracy": 0.756,
+  "val_defect_recall": 0.75,
+  "val_normal_false_positive_rate": 0.2381,
+  "val_confusion_matrix": [
+    [
+      16,
+      5
+    ],
+    [
+      4,
+      12
+    ]
+  ],
+  "val_images_count": 37,
+  "default_stage1_prob_threshold": 0.5,
+  "default_min_defective_patches": 1,
+  "top_candidates": [
+    {
+      "stage1_prob_threshold": 0.45,
+      "min_defective_patches": 4,
+      "balanced_accuracy": 0.756,
+      "defect_recall": 0.75,
+      "normal_fpr": 0.2381,
+      "tp": 12,
+      "fp": 5,
+      "tn": 16,
+      "fn": 4,
+      "confusion_matrix": [
+        [
+          16,
+          5
+        ],
+        [
+          4,
+          12
+        ]
+      ]
+    },
+    {
+      "stage1_prob_threshold": 0.5,
+      "min_defective_patches": 2,
+      "balanced_accuracy": 0.7485,
+      "defect_recall": 0.6875,
+      "normal_fpr": 0.1905,
+      "tp": 11,
+      "fp": 4,
+      "tn": 17,
+      "fn": 5,
+      "confusion_matrix": [
+        [
+          17,
+          4
+        ],
+        [
+          5,
+          11
+        ]
+      ]
+    },
+    {
+      "stage1_prob_threshold": 0.5,
+      "min_defective_patches": 1,
+      "balanced_accuracy": 0.7247,
+      "defect_recall": 0.6875,
+      "normal_fpr": 0.2381,
+      "tp": 11,
+      "fp": 5,
+      "tn": 16,
+      "fn": 5,
+      "confusion_matrix": [
+        [
+          16,
+          5
+        ],
+        [
+          5,
+          11
+        ]
+      ]
+    },
+    {
+      "stage1_prob_threshold": 0.5,
+      "min_defective_patches": 3,
+      "balanced_accuracy": 0.7173,
+      "defect_recall": 0.625,
+      "normal_fpr": 0.1905,
+      "tp": 10,
+      "fp": 4,
+      "tn": 17,
+      "fn": 6,
+      "confusion_matrix": [
+        [
+          17,
+          4
+        ],
+        [
+          6,
+          10
+        ]
+      ]
+    },
+    {
+      "stage1_prob_threshold": 0.45,
+      "min_defective_patches": 3,
+      "balanced_accuracy": 0.7158,
+      "defect_recall": 0.8125,
+      "normal_fpr": 0.381,
+      "tp": 13,
+      "fp": 8,
+      "tn": 13,
+      "fn": 3,
+      "confusion_matrix": [
+        [
+          13,
+          8
+        ],
+        [
+          3,
+          13
+        ]
+      ]
+    },
+    {
+      "stage1_prob_threshold": 0.7,
+      "min_defective_patches": 1,
+      "balanced_accuracy": 0.7024,
+      "defect_recall": 0.5,
+      "normal_fpr": 0.0952,
+      "tp": 8,
+      "fp": 2,
+      "tn": 19,
+      "fn": 8,
+      "confusion_matrix": [
+        [
+          19,
+          2
+        ],
+        [
+          8,
+          8
+        ]
+      ]
+    },
+    {
+      "stage1_prob_threshold": 0.7,
+      "min_defective_patches": 2,
+      "balanced_accuracy": 0.7024,
+      "defect_recall": 0.5,
+      "normal_fpr": 0.0952,
+      "tp": 8,
+      "fp": 2,
+      "tn": 19,
+      "fn": 8,
+      "confusion_matrix": [
+        [
+          19,
+          2
+        ],
+        [
+          8,
+          8
+        ]
+      ]
+    },
+    {
+      "stage1_prob_threshold": 0.7,
+      "min_defective_patches": 3,
+      "balanced_accuracy": 0.7024,
+      "defect_recall": 0.5,
+      "normal_fpr": 0.0952,
+      "tp": 8,
+      "fp": 2,
+      "tn": 19,
+      "fn": 8,
+      "confusion_matrix": [
+        [
+          19,
+          2
+        ],
+        [
+          8,
+          8
+        ]
+      ]
+    },
+    {
+      "stage1_prob_threshold": 0.65,
+      "min_defective_patches": 2,
+      "balanced_accuracy": 0.7024,
+      "defect_recall": 0.5,
+      "normal_fpr": 0.0952,
+      "tp": 8,
+      "fp": 2,
+      "tn": 19,
+      "fn": 8,
+      "confusion_matrix": [
+        [
+          19,
+          2
+        ],
+        [
+          8,
+          8
+        ]
+      ]
+    },
+    {
+      "stage1_prob_threshold": 0.65,
+      "min_defective_patches": 3,
+      "balanced_accuracy": 0.7024,
+      "defect_recall": 0.5,
+      "normal_fpr": 0.0952,
+      "tp": 8,
+      "fp": 2,
+      "tn": 19,
+      "fn": 8,
+      "confusion_matrix": [
+        [
+          19,
+          2
+        ],
+        [
+          8,
+          8
+        ]
+      ]
+    }
+  ]
+}

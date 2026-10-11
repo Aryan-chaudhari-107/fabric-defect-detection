@@ -1,0 +1,29 @@
+# English: Core numerical and data-processing libraries.
+# Hindi: Ye libraries images aur dataset ko process karne ke liye hain.
+
+numpy>=1.26,<3
+pandas>=2.2,<3
+
+# English: Computer vision and visualization.
+# Hindi: Image processing aur graphs ke liye.
+opencv-python>=4.10,<5
+Pillow>=10.4,<12
+matplotlib>=3.9,<4
+
+# English: Machine-learning utilities and evaluation.
+# Hindi: Dataset splitting aur evaluation metrics ke liye.
+scikit-learn>=1.5,<2
+
+# English: PyTorch deep-learning stack.
+# Hindi: Neural networks train karne ke liye.
+torch>=2.4
+torchvision>=0.19
+
+# English: Streamlit provides the web interface.
+# Hindi: Isi se hum apni ML web application banayenge.
+streamlit>=1.39,<2
+
+# English: Configuration and progress utilities.
+# Hindi: Training ko manageable aur readable banane ke liye.
+PyYAML>=6.0
+tqdm>=4.66,<5

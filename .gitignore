@@ -1,0 +1,63 @@
+# English: Python generated files.
+# Hindi: Temporary Python files ko Git mein commit nahi karna.
+__pycache__/
+*.pyc
+
+# English: Virtual environments.
+# Hindi: Local environment ko repository mein upload nahi karna.
+.venv/
+venv/
+env/
+
+# English: Large raw datasets should not be committed.
+# Hindi: Original AITEX images bahut large hain, GitHub mein nahi daalenge.
+data/raw/
+
+# English: Generated processed data.
+# Hindi: Generated patches ko repository se exclude karenge.
+data/processed/
+
+# English: Model weights can be large.
+# Hindi: Trained weights ko Git mein store karne ke bajay external storage use kar sakte hain.
+models/*.pt
+models/**/*.pt
+
+# English: Smoke-test checkpoints and archives are 1-2 epoch smoke tests, not real results.
+# Hindi: Smoke-test checkpoints aur archives 1-2 epoch ke smoke tests hain, real results nahi.
+models/_smoketest_archive/
+models/_smoketest_archive_v1/
+results/_smoketest_archive/
+results/_smoketest_archive_v1/
+
+# English: Ignore everything under results/ except metrics, confusion matrices, training curves, and localization figures.
+# Hindi: Results folder mein se metrics, confusion matrix, training curves aur localization figures ke alawa baki sab ignore karo.
+results/*
+!results/metrics/
+results/metrics/*
+!results/metrics/*.json
+!results/confusion_matrix/
+results/confusion_matrix/*
+!results/confusion_matrix/*.png
+!results/training_curves/
+results/training_curves/*
+!results/training_curves/*.png
+!results/localization/
+results/localization/*
+!results/localization/*.png
+!results/predictions/
+results/predictions/*
+
+# English: Notebook runtime files.
+# Hindi: Jupyter temporary files.
+.ipynb_checkpoints/
+
+# English: OS/editor files.
+# Hindi: System/editor generated files.
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+models_backup/
+results_backup/
+webapp_backup/
