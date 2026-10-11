@@ -361,7 +361,7 @@ The classifier is trained on 256 x 256 patches, so an uploaded full strip is
 Stage 1:
 - every patch is scored independently for P(Defective)
 - a patch is flagged defective when that probability exceeds
-  `STAGE1_DEFECT_PROB_THRESHOLD` (0.5)
+  `STAGE1_DEFECT_PROB_THRESHOLD` (config default 0.5; evaluate.py and the app load the tuned values, currently tau = 0.60 and k = 2, from `results/metrics/stage1_thresholds_<model>.json`)
 - the image is defective when at least `STAGE1_MIN_DEFECTIVE_PATCHES` (1)
   patches are flagged
 - stage-1 confidence is averaged **over flagged patches only**. Averaging over
@@ -578,7 +578,7 @@ error naming the exact training command to run.
 Honest assessment:
 
 1. **Small Test Set and Wide Confidence Intervals**: The held-out test split contains only 37 images (21 Normal, 16 Defective). Stage 1 test balanced accuracy is 0.9137 with approximate 95% confidence interval `[0.7066, 0.9783]` (averaging the Wilson interval endpoints of Recall and TNR). Individual Wilson score intervals remain wide: defect recall 0.8750 `[0.6398, 0.9650]` and normal FPR 0.0476 `[0.0085, 0.2267]`.
-2. **Borderline $k=2$ Decision Rule**: Defects concentrated in a single patch are missed by the minimum patch rule (two test false negatives: `0001_002_00.png` and `0058_019_06.png`, each with exactly 1 patch $> 0.60$). Conversely, normal fabric texture can trigger multiple patches (one false positive: `0013_000_03.png`, with 9 patches $> 0.60$ under the $\tau = 0.60, k = 2$ decision threshold).
+2. **Borderline $k=2$ Decision Rule**: Defects concentrated in a single patch are missed by the minimum patch rule (two test false negatives: `0001_002_00.png` and `0058_019_06.png`, each with exactly 1 patch $> 0.60$). Conversely, a normal strip can also have several patches above the threshold (one false positive: `0013_000_03.png`, with 9 patches $> 0.60$ under the $\tau = 0.60, k = 2$ decision threshold).
 3. **Stage 2 Defect Type Classification is Weak**: Test accuracy is 0.4118 (14/34) and the model frequently defaults to *Broken Pick*. Ten classes have $\le 2$ test samples, and three classes (*Knots*, *Contamination*, *Weft Crack*) have only one original image and remain train-only.
 4. **Preliminary Localization**: The U-Net achieves a mean Dice of 0.1575, but the median Dice is only 0.0814. It touches the ground-truth box in 8 of 14 defective test images ($57.1\%$).
 5. **Roll Leakage in Default Split**: Fabric weave patterns come from only 8 distinct rolls; strict roll-grouping eliminates roll leakage but removes nearly half the defect classes from validation and test due to data scarcity.
@@ -661,13 +661,26 @@ Honest assessment:
 
 ### Installation
 ```bash
-git clone <YOUR-REPO-URL>
+git clone https://github.com/Aryan-chaudhari-107/fabric-defect-detection.git
 cd fabric-defect-detection
 python -m venv .venv
 .venv\Scripts\activate       # Windows
 pip install -r requirements.txt
 ```
-*(Note: Trained `.pt` checkpoint files in `models/` are large binaries and are not tracked in git. Train or place checkpoints prior to running).*
+### Download the trained models
+The checkpoints are not stored in Git because of their size. Download
+`fabric_release.zip` from:
+https://drive.google.com/file/d/1RWumW-sU9GHv2GtNh7zQ7P-1ISAK5vBt/view?usp=sharing
+
+Unzip it and make sure the project root contains:
+- `models/classifier/*.pt` (binary and defect-type classifiers)
+- `models/segmenter/unet_best.pt`
+
+If the zip extracts to `fabric_release/models/`, move that `models` folder into the
+project root.
+
+Hindi: `fabric_release.zip` download karke unzip karo aur `models` folder ko project
+ke root mein rakho (`models/classifier/` aur `models/segmenter/`).
 
 ### Web Application
 ```bash
